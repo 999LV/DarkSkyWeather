@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<implementation>
+<files>L_DarkSkyWeather.lua</files>
+<startup>init</startup>
+</implementation>
