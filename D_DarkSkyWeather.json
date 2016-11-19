@@ -1,5 +1,127 @@
 {
-	"default_icon": "darksky.png",
+	"default_icon": "DarkSky-darksky.png",
+	"state_icons": [
+        {
+            "img": "DarkSky-clear-day.png",
+            "conditions": [
+                {
+                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+                    "variable": "icon",
+                    "operator": "==",
+                    "value": "clear-day",
+                    "subcategory_num": 0
+                }
+            ]
+        },
+        {
+            "img": "DarkSky-clear-night.png",
+            "conditions": [
+                {
+                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+                    "variable": "icon",
+                    "operator": "==",
+                    "value": "clear-night",
+                    "subcategory_num": 0
+                }
+            ]
+        },
+       {
+            "img": "DarkSky-partly-cloudy-day.png",
+            "conditions": [
+                {
+                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+                    "variable": "icon",
+                    "operator": "==",
+                    "value": "partly-cloudy-day",
+                    "subcategory_num": 0
+                }
+            ]
+        },
+        {
+            "img": "DarkSky-partly-cloudy-night.png",
+            "conditions": [
+                {
+                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+                    "variable": "icon",
+                    "operator": "==",
+                    "value": "partly-cloudy-night",
+                    "subcategory_num": 0
+                }
+            ]
+        },
+        {
+            "img": "DarkSky-cloudy.png",
+            "conditions": [
+                {
+                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+                    "variable": "icon",
+                    "operator": "==",
+                    "value": "cloudy",
+                    "subcategory_num": 0
+                }
+            ]
+        },
+        {
+            "img": "DarkSky-rain.png",
+            "conditions": [
+                {
+                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+                    "variable": "icon",
+                    "operator": "==",
+                    "value": "rain",
+                    "subcategory_num": 0
+                }
+            ]
+        },
+        {
+            "img": "DarkSky-sleet.png",
+            "conditions": [
+                {
+                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+                    "variable": "icon",
+                    "operator": "==",
+                    "value": "sleet",
+                    "subcategory_num": 0
+                }
+            ]
+        },
+        {
+            "img": "DarkSky-snow.png",
+            "conditions": [
+                {
+                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+                    "variable": "icon",
+                    "operator": "==",
+                    "value": "snow",
+                    "subcategory_num": 0
+                }
+            ]
+        },
+        {
+            "img": "DarkSky-wind.png",
+            "conditions": [
+                {
+                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+                    "variable": "icon",
+                    "operator": "==",
+                    "value": "wind",
+                    "subcategory_num": 0
+                }
+            ]
+        },
+        {
+            "img": "DarkSky-fog.png",
+            "conditions": [
+                {
+                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+                    "variable": "icon",
+                    "operator": "==",
+                    "value": "fog",
+                    "subcategory_num": 0
+                }
+            ]
+        }
+    ],
 	"Tabs": [
 		{
 			"Label": {

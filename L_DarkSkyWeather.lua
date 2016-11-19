@@ -1,5 +1,5 @@
 _NAME = "DarkSky Weather"
-_VERSION = "0.2"
+_VERSION = "0.3"
 _DESCRIPTION = "DarkSky Weather plugin"
 _AUTHOR = "logread (aka LV999)"
 
@@ -7,6 +7,10 @@ _AUTHOR = "logread (aka LV999)"
 
 Version 0.1 2016-11-17 - Alpha version for testing
 Version 0.2 2016-11-18 - Beta version for first AltUI App Store release
+Version 0.3 2016-11-19 - Beta version with:
+        automatic location setup by default - thanks @akbooer
+        default icon fix - thanks @NikV
+        state icons to reflect current weather - icons from icon8.com 
 
 This plug-in is intended to run under the "openLuup" emulation of a Vera system
 It should work on a "real" Vera, but has not been tested in that environment.
@@ -35,13 +39,14 @@ local DS_urltemplate = "https://api.darksky.net/forecast/%s/%s,%s?lang=%s&units=
 
 local DS = {
 	Key = "Enter your DarkSky API key here",
-	Latitude = "Enter location latitude in decimal format",
-  Longitude = "Enter location longitude in decimal format",
+	Latitude = "",
+  Longitude = "",
 	Period = 1800,	-- data refresh interval in seconds
 	Units = "auto",
 	Language = "en", -- default language
   ProviderName = "DarkSky (formerly Forecast.io)", -- added for reference to data source
 	ProviderURL = "https://darksky.net/dev/",
+  IconsProvider = "Thanks to icons8 at https://icons8.com",
   Documentation = "https://raw.githubusercontent.com/999LV/DarkSkyWeather/master/documentation/DarkSkyWeather.pdf",
   Version = _VERSION
 	}
@@ -54,6 +59,7 @@ local VariablesMap = {
   currently_dewPoint = {serviceId = SID_Weather, variable = "CurrentDewPoint", decimal = 1},
   currently_summary = {serviceId = SID_Weather, variable = "CurrentConditions"},
   currently_cloudCover = {serviceId = SID_Weather, variable = "CurrentCloudCover", multiplier = 100},
+  currently_icon = {serviceId = SID_Weather, variable = "icon"},
   daily_summary = {serviceId = SID_Weather, variable = "WeekConditions"},
   daily_data_1_summary = {serviceId = SID_Weather, variable = "TodayConditions"},
   daily_data_2_summary = {serviceId = SID_Weather, variable = "TomorrowConditions"},
@@ -142,7 +148,17 @@ local function check_param_updates() -- check if device parameters are current
 local tvalue
 	for key, value in pairs(DS) do
 		tvalue = luup.variable_get(SID_Weather, key, this_device) or ""
-		if tvalue == "" then luup.variable_set(SID_Weather, key, value, this_device) -- device newly created... need to initialize variables
+    if key == "Version" and tvalue ~= value then tvalue = "" end -- register we upgraded to a new version 
+		if tvalue == "" then
+      if key == "Latitude" and value == "" then -- new set up, initialize latitude from controller info
+        value = luup.attr_get("latitude", 0)
+        DS[key] = value
+      end
+      if key == "Longitude" and value == "" then -- new set up, initialize longitude from controller info
+        value = luup.attr_get("longitude", 0)
+        DS[key] = value
+      end
+      luup.variable_set(SID_Weather, key, value, this_device) -- device newly created... need to initialize variables
 		elseif tvalue ~= value then DS[key] = tvalue end
 	end
 end
