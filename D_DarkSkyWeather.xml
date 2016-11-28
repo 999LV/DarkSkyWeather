@@ -10,19 +10,13 @@
     <manufacturer>logread</manufacturer>
     <manufacturerURL></manufacturerURL>
     <modelDescription>DarkSky Weather API Plugin</modelDescription>
-    <modelName>v0.1</modelName>
+    <modelName>DSW</modelName>
     <modelNumber>1</modelNumber>
     <handleChildren>1</handleChildren>
     <Category_Num>1</Category_Num>
     <UDN></UDN>
-    <serviceList>
-      <service>
-        <serviceType>urn:logread-com:service:DarkSky:1</serviceType>
-        <serviceId>urn:logread-com:serviceId:DarkSky1</serviceId>
-        <SCPDURL>S_DarkSkyWeather.xml</SCPDURL>
-      </service>
-    </serviceList>
-		<staticJson>D_DarkSkyWeather.json</staticJson>
+    <serviceList></serviceList>
+	<staticJson>D_DarkSkyWeather.json</staticJson>
     <implementationList>
       <implementationFile>I_DarkSkyWeather.xml</implementationFile>
     </implementationList>
