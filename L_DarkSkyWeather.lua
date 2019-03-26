@@ -1,5 +1,5 @@
 _NAME = "DarkSky Weather"
-_VERSION = "0.4"
+_VERSION = "0.5"
 _DESCRIPTION = "DarkSky Weather plugin"
 _AUTHOR = "logread (aka LV999)"
 
@@ -12,6 +12,7 @@ Version 0.3 2016-11-19 - Beta version with:
         default icon fix - thanks @NikV
         state icons to reflect current weather - icons from icon8.com
 Version 0.4 2016-11-26 - a few bug fixes and exposes more DarkSky variables - thanks @MikeYeager
+Version 0.5 2019-03-23 - Added WindGust, uvIndex, Visibility
 
 This plugin is intended to run under the "openLuup" emulation of a Vera system
 It should work on a "real" Vera, but has not been tested in that environment.
@@ -67,6 +68,8 @@ local VariablesMap = {
   currently_humidity = {serviceId = "urn:micasaverde-com:serviceId:HumiditySensor1", variable = "CurrentLevel", multiplier = 100, decimal = 0},
   currently_icon = {serviceId = SID_Weather, variable = "icon"},
   currently_ozone = {serviceId = SID_Weather, variable = "Ozone"},
+  currently_uvIndex = {serviceId = SID_Weather, variable = "uvIndex"},
+  currently_visibility = {serviceId = SID_Weather, variable = "Visibility"},
   currently_precipIntensity = {serviceId = SID_Weather, variable = "PrecipIntensity"},
   currently_precipProbability = {serviceId = SID_Weather, variable = "PrecipProbability", multiplier = 100},
   currently_precipType = {serviceId = SID_Weather, variable = "PrecipType"},
@@ -76,6 +79,7 @@ local VariablesMap = {
   currently_time = {serviceId = SID_Weather, variable = "LastUpdate"},
   currently_windBearing =  {serviceId = SID_Weather, variable = "WindBearing"},
   currently_windSpeed = {serviceId = SID_Weather, variable = "WindSpeed"},
+  currently_windGust = {serviceId = SID_Weather, variable = "WindGust"},
   daily_data_1_pressure = {serviceId = SID_Weather, variable = "TodayPressure", decimal = 0},
   daily_data_1_summary = {serviceId = SID_Weather, variable = "TodayConditions"},
   daily_data_1_temperatureMax = {serviceId = SID_Weather, variable = "TodayHighTemp", decimal = 1},
@@ -120,23 +124,23 @@ end
 local function setvariables(key, value)
 	if VariablesMap[key] then
 		if VariablesMap[key].pattern then value = string.gsub(value, VariablesMap[key].pattern, "") end
-    if VariablesMap[key].multiplier then value = value * VariablesMap[key].multiplier end
-    if VariablesMap[key].decimal then value = math.floor(value * 10^VariablesMap[key].decimal + .5) / 10^VariablesMap[key].decimal end
-    setVar(VariablesMap[key].serviceId, VariablesMap[key].variable, value)
+		if VariablesMap[key].multiplier then value = value * VariablesMap[key].multiplier end
+		if VariablesMap[key].decimal then value = math.floor(value * 10^VariablesMap[key].decimal + .5) / 10^VariablesMap[key].decimal end
+		setVar(VariablesMap[key].serviceId, VariablesMap[key].variable, value)
 		if VariablesMap[key].serviceId == "urn:upnp-org:serviceId:TemperatureSensor1" then -- we update the child device as well
 			setVar(VariablesMap[key].serviceId, VariablesMap[key].variable, value, child_temperature)
 		end
 		if VariablesMap[key].serviceId == "urn:micasaverde-com:serviceId:HumiditySensor1" then -- we update the child device as well
 			setVar(VariablesMap[key].serviceId, VariablesMap[key].variable, value, child_humidity)
 		end
-    if tonumber(DS.RainSensor) == 1 then
-      -- the option of a virtual rain sensor is on, so we set the rain flags based on the trigger levels
-      nicelog({"DEBUG: IntensityTrigger = ", DS.PrecipIntensityTrigger, " - ProbabilityTrigger = ", DS.PrecipProbabilityTrigger}) 
-      if key == "currently_precipIntensity" and tonumber(value) >= tonumber(DS.PrecipIntensityTrigger)
-        then rain_intensity_trigger = tonumber(value) >= tonumber(DS.PrecipIntensityTrigger) 
-      elseif key == "currently_precipProbability" and tonumber(value) >= tonumber(DS.PrecipProbabilityTrigger)
-        then rain_probability_trigger = tonumber(value) >= tonumber(DS.PrecipProbabilityTrigger) end
-    end
+		if tonumber(DS.RainSensor) == 1 then
+			-- the option of a virtual rain sensor is on, so we set the rain flags based on the trigger levels
+			nicelog({"DEBUG: IntensityTrigger = ", DS.PrecipIntensityTrigger, " - ProbabilityTrigger = ", DS.PrecipProbabilityTrigger}) 
+			if key == "currently_precipIntensity" and tonumber(value) >= tonumber(DS.PrecipIntensityTrigger)
+        		  then rain_intensity_trigger = tonumber(value) >= tonumber(DS.PrecipIntensityTrigger) 
+      			elseif key == "currently_precipProbability" and tonumber(value) >= tonumber(DS.PrecipProbabilityTrigger)
+        		  then rain_probability_trigger = tonumber(value) >= tonumber(DS.PrecipProbabilityTrigger) end
+    		end
 	end
 end
 
