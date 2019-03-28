@@ -189,6 +189,16 @@
 					}
 				}
 			]
+		},
+		{
+			"Label": {
+			  "lang_tag": "advanced",
+			  "text": "Advanced"
+			},
+			"Position": "1",
+			"TabType": "javascript",
+			"ScriptName": "shared.js",
+			"Function": "advanced_device"
 		}
   ],
 	"DeviceType": "DarkSkyWeather"
