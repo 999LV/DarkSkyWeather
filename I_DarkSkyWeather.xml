@@ -2,9 +2,17 @@
 <!-- 
 	Module I_DarkSkyWeather.xml
 	Written by R.Boer. 
-	V0.6, 29 March 2019
+	V0.7, 9 April 2019
 -->
 <implementation>
+	<specVersion>
+		<major>1</major>
+		<minor>0</minor>
+	</specVersion>
+	<settings>
+		<protocol>crlf</protocol>
+	</settings>
+	<incoming></incoming>
 	<files>L_DarkSkyWeather.lua</files>
 	<startup>init</startup>
 	<actionList>

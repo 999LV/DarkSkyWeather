@@ -1,164 +1,142 @@
 {
-	"default_icon": "DarkSky-darksky.png",
-	"state_icons": [
-        {
-            "img": "DarkSky-clear-day.png",
-            "conditions": [
-                {
-                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
-                    "variable": "icon",
-                    "operator": "==",
-                    "value": "clear-day"
-                }
-            ]
-        },
-        {
-            "img": "DarkSky-clear-night.png",
-            "conditions": [
-                {
-                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
-                    "variable": "icon",
-                    "operator": "==",
-                    "value": "clear-night"
-                }
-            ]
-        },
-       {
-            "img": "DarkSky-partly-cloudy-day.png",
-            "conditions": [
-                {
-                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
-                    "variable": "icon",
-                    "operator": "==",
-                    "value": "partly-cloudy-day"
-                }
-            ]
-        },
-        {
-            "img": "DarkSky-partly-cloudy-night.png",
-            "conditions": [
-                {
-                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
-                    "variable": "icon",
-                    "operator": "==",
-                    "value": "partly-cloudy-night"
-                }
-            ]
-        },
-        {
-            "img": "DarkSky-cloudy.png",
-            "conditions": [
-                {
-                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
-                    "variable": "icon",
-                    "operator": "==",
-                    "value": "cloudy"
-                }
-            ]
-        },
-        {
-            "img": "DarkSky-rain.png",
-            "conditions": [
-                {
-                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
-                    "variable": "icon",
-                    "operator": "==",
-                    "value": "rain"
-                }
-            ]
-        },
-        {
-            "img": "DarkSky-sleet.png",
-            "conditions": [
-                {
-                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
-                    "variable": "icon",
-                    "operator": "==",
-                    "value": "sleet"
-                }
-            ]
-        },
-        {
-            "img": "DarkSky-snow.png",
-            "conditions": [
-                {
-                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
-                    "variable": "icon",
-                    "operator": "==",
-                    "value": "snow"
-                }
-            ]
-        },
-        {
-            "img": "DarkSky-wind.png",
-            "conditions": [
-                {
-                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
-                    "variable": "icon",
-                    "operator": "==",
-                    "value": "wind"
-                }
-            ]
-        },
-        {
-            "img": "DarkSky-fog.png",
-            "conditions": [
-                {
-                    "service": "urn:upnp-micasaverde-com:serviceId:Weather1",
-                    "variable": "icon",
-                    "operator": "==",
-                    "value": "fog"
-                }
-            ]
-        }
-    ],
-	"Tabs": [
+	"default_icon": "DarkSky-default.png",
+	"state_icons": [{
+			"img": "DarkSky-clear-day.png",
+			"conditions": [{
+				"service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+				"variable": "icon",
+				"operator": "==",
+				"value": "clear-day"
+			}]
+		},
 		{
+			"img": "DarkSky-clear-night.png",
+			"conditions": [{
+				"service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+				"variable": "icon",
+				"operator": "==",
+				"value": "clear-night"
+			}]
+		},
+		{
+			"img": "DarkSky-partly-cloudy-day.png",
+			"conditions": [{
+				"service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+				"variable": "icon",
+				"operator": "==",
+				"value": "partly-cloudy-day"
+			}]
+		},
+		{
+			"img": "DarkSky-partly-cloudy-night.png",
+			"conditions": [{
+				"service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+				"variable": "icon",
+				"operator": "==",
+				"value": "partly-cloudy-night"
+			}]
+		},
+		{
+			"img": "DarkSky-cloudy.png",
+			"conditions": [{
+				"service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+				"variable": "icon",
+				"operator": "==",
+				"value": "cloudy"
+			}]
+		},
+		{
+			"img": "DarkSky-rain.png",
+			"conditions": [{
+				"service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+				"variable": "icon",
+				"operator": "==",
+				"value": "rain"
+			}]
+		},
+		{
+			"img": "DarkSky-sleet.png",
+			"conditions": [{
+				"service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+				"variable": "icon",
+				"operator": "==",
+				"value": "sleet"
+			}]
+		},
+		{
+			"img": "DarkSky-snow.png",
+			"conditions": [{
+				"service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+				"variable": "icon",
+				"operator": "==",
+				"value": "snow"
+			}]
+		},
+		{
+			"img": "DarkSky-wind.png",
+			"conditions": [{
+				"service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+				"variable": "icon",
+				"operator": "==",
+				"value": "wind"
+			}]
+		},
+		{
+			"img": "DarkSky-fog.png",
+			"conditions": [{
+				"service": "urn:upnp-micasaverde-com:serviceId:Weather1",
+				"variable": "icon",
+				"operator": "==",
+				"value": "fog"
+			}]
+		}
+	],
+	"Tabs": [{
 			"Label": {
 				"lang_tag": "tabname_control",
 				"text": "Control"
 			},
 			"Position": "0",
 			"TabType": "flash",
-			"ControlGroup":[
-				{
-					"id": "1",
-					"scenegroup": "1"
-				}
-			],
-			"SceneGroup":[
-				{
-					"id": "1",
-					"top": "1.5",
-					"left": "0.25",
-					"x": "1.5",
-					"y": "2"
-				}
-			],
-			"Control": [
-				{
-					"ControlGroup":"1",
+			"TopNavigationTab": 1,
+			"ControlGroup": [{
+				"id": "1",
+				"scenegroup": "1"
+			}],
+			"SceneGroup": [{
+				"id": "1",
+				"top": "1.5",
+				"left": "0.25",
+				"x": "1.5",
+				"y": "2"
+			}],
+			"Control": [{
+					"ControlGroup": "1",
 					"ControlType": "variable",
 					"top": "0",
 					"left": "0",
 					"Display": {
 						"Service": "urn:upnp-org:serviceId:altui1",
 						"Variable": "DisplayLine1",
-						"Top": 40,
+						"Top": 20,
 						"Left": 50,
 						"Width": 200,
 						"Height": 20
 					}
 				},
 				{
-					"ControlGroup":"1",
+					"ControlGroup": "1",
+					"ControlType": "line_break"
+				},
+				{
+					"ControlGroup": "1",
 					"ControlType": "variable",
 					"top": "1",
 					"left": "0",
 					"Display": {
 						"Service": "urn:upnp-org:serviceId:altui1",
 						"Variable": "DisplayLine2",
-						"Top": 60,
+						"Top": 40,
 						"Left": 50,
 						"Width": 200,
 						"Height": 20
@@ -168,9 +146,11 @@
 					"ControlType": "label",
 					"top": "3",
 					"left": "0",
-					"Label": { "text": "Apparent temperature:" },
+					"Label": {
+						"text": "Apparent temperature:"
+					},
 					"Display": {
-						"Top": 100,
+						"Top": 65,
 						"Left": 50,
 						"Width": 100,
 						"Height": 20
@@ -183,58 +163,8 @@
 					"Display": {
 						"Service": "urn:upnp-micasaverde-com:serviceId:Weather1",
 						"Variable": "ApparentTemperature",
-						"Top": 100,
-						"Left": 150,
-						"Width": 75,
-						"Height": 20
-					}
-				},
-				{
-					"ControlType": "label",
-					"top": "4",
-					"left": "0",
-					"Label": { "text": "Current temperature:" },
-					"Display": {
-						"Top": 120,
-						"Left": 50,
-						"Width": 100,
-						"Height": 20
-					}
-				},
-				{
-					"ControlType": "variable",
-					"top": "4",
-					"left": "1",
-					"Display": {
-						"Service": "urn:upnp-micasaverde-com:serviceId:Weather1",
-						"Variable": "CurrentTemperature",
-						"Top": 120,
-						"Left": 150,
-						"Width": 75,
-						"Height": 20
-					}
-				},
-				{
-					"ControlType": "label",
-					"top": "5",
-					"left": "0",
-					"Label": { "text": "Humidity:" },
-					"Display": {
-						"Top": 140,
-						"Left": 50,
-						"Width": 100,
-						"Height": 20
-					}
-				},
-				{
-					"ControlType": "variable",
-					"top": "5",
-					"left": "1",
-					"Display": {
-						"Service": "urn:micasaverde-com:serviceId:HumiditySensor1",
-						"Variable": "CurrentLevel",
-						"Top": 140,
-						"Left": 150,
+						"Top": 65,
+						"Left": 180,
 						"Width": 75,
 						"Height": 20
 					}
@@ -243,9 +173,11 @@
 					"ControlType": "label",
 					"top": "6",
 					"left": "0",
-					"Label": { "text": "Wind Speed:" },
+					"Label": {
+						"text": "Wind Speed:"
+					},
 					"Display": {
-						"Top": 160,
+						"Top": 85,
 						"Left": 50,
 						"Width": 100,
 						"Height": 20
@@ -258,8 +190,8 @@
 					"Display": {
 						"Service": "urn:upnp-micasaverde-com:serviceId:Weather1",
 						"Variable": "WindSpeed",
-						"Top": 160,
-						"Left": 150,
+						"Top": 85,
+						"Left": 180,
 						"Width": 75,
 						"Height": 20
 					}
@@ -268,9 +200,11 @@
 					"ControlType": "label",
 					"top": "7",
 					"left": "0",
-					"Label": { "text": "Wind gust speed:" },
+					"Label": {
+						"text": "Wind gust speed:"
+					},
 					"Display": {
-						"Top": 180,
+						"Top": 105,
 						"Left": 50,
 						"Width": 100,
 						"Height": 20
@@ -283,8 +217,8 @@
 					"Display": {
 						"Service": "urn:upnp-micasaverde-com:serviceId:Weather1",
 						"Variable": "WindGust",
-						"Top": 180,
-						"Left": 150,
+						"Top": 105,
+						"Left": 180,
 						"Width": 75,
 						"Height": 20
 					}
@@ -293,9 +227,11 @@
 					"ControlType": "label",
 					"top": "8",
 					"left": "0",
-					"Label": { "text": "Wind Bearing:" },
+					"Label": {
+						"text": "Wind Bearing:"
+					},
 					"Display": {
-						"Top": 200,
+						"Top": 125,
 						"Left": 50,
 						"Width": 100,
 						"Height": 20
@@ -308,8 +244,8 @@
 					"Display": {
 						"Service": "urn:upnp-micasaverde-com:serviceId:Weather1",
 						"Variable": "WindBearing",
-						"Top": 200,
-						"Left": 150,
+						"Top": 125,
+						"Left": 180,
 						"Width": 75,
 						"Height": 20
 					}
@@ -318,9 +254,11 @@
 					"ControlType": "label",
 					"top": "9",
 					"left": "0",
-					"Label": { "text": "Tomorrow Conditions:" },
+					"Label": {
+						"text": "Tomorrow Conditions:"
+					},
 					"Display": {
-						"Top": 220,
+						"Top": 145,
 						"Left": 50,
 						"Width": 100,
 						"Height": 20
@@ -333,8 +271,8 @@
 					"Display": {
 						"Service": "urn:upnp-micasaverde-com:serviceId:Weather1",
 						"Variable": "TomorrowConditions",
-						"Top": 220,
-						"Left": 150,
+						"Top": 145,
+						"Left": 180,
 						"Width": 75,
 						"Height": 20
 					}
@@ -343,9 +281,11 @@
 					"ControlType": "label",
 					"top": "10",
 					"left": "0",
-					"Label": { "text": "Week Conditions:" },
+					"Label": {
+						"text": "Week Conditions:"
+					},
 					"Display": {
-						"Top": 240,
+						"Top": 165,
 						"Left": 50,
 						"Width": 100,
 						"Height": 20
@@ -358,20 +298,21 @@
 					"Display": {
 						"Service": "urn:upnp-micasaverde-com:serviceId:Weather1",
 						"Variable": "WeekConditions",
-						"Top": 240,
-						"Left": 150,
+						"Top": 165,
+						"Left": 180,
 						"Width": 75,
 						"Height": 20
 					}
 				},
-
 				{
 					"ControlType": "label",
 					"top": "11",
 					"left": "0",
-					"Label": { "text": "Plugin Version:" },
+					"Label": {
+						"text": "Plugin Version:"
+					},
 					"Display": {
-						"Top": 280,
+						"Top": 200,
 						"Left": 50,
 						"Width": 100,
 						"Height": 20
@@ -384,24 +325,24 @@
 					"Display": {
 						"Service": "urn:upnp-micasaverde-com:serviceId:Weather1",
 						"Variable": "Version",
-						"Top": 280,
-						"Left": 150,
+						"Top": 200,
+						"Left": 180,
 						"Width": 75,
 						"Height": 20
 					}
 				}
 			]
 		},
-		{ 
-			"Label": { 
-				"lang_tag": "settings", 
-				"text": "Settings" 
-			}, 
-			"TopNavigationTab": 1, 
-			"Position": "1", 
-			"TabType": "javascript", 
-			"ScriptName": "J_DarkSkyWeather.js", 
-			"Function": "DarkSkyWeather.Settings" 
+		{
+			"Label": {
+				"lang_tag": "settings",
+				"text": "Settings"
+			},
+			"TopNavigationTab": 1,
+			"Position": "1",
+			"TabType": "javascript",
+			"ScriptName": "J_DarkSkyWeather.js",
+			"Function": "DarkSkyWeather.Settings"
 		},
 		{
 			"Label": {
@@ -454,8 +395,7 @@
 			"Function": "device_scenes"
 		}
 	],
-	"eventList2": [ 
-		{
+	"eventList2": [{
 			"id": 1,
 			"label": {
 				"lang_tag": "ui7_temperature_goes_above",
@@ -463,26 +403,24 @@
 			},
 			"serviceId": "urn:upnp-org:serviceId:TemperatureSensor1",
 			"norepeat": "1",
-			"argumentList": [
-				{
-					"id": 1,
-					"dataType": "i4",
-					"name": "CurrentTemperature",
-					"comparisson": ">",
-					"prefix": {
-						"lang_tag": "ui7_temperature",
-						"text": "temperature"
-					},
-					"suffix": {
-						"lang_tag": "ui7_degrees",
-						"text": "degrees"
-					},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_temperature_goes_above",
-						"text": "_DEVICE_NAME_ temperature goes above _ARGUMENT_VALUE_ degrees"
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"name": "CurrentTemperature",
+				"comparisson": ">",
+				"prefix": {
+					"lang_tag": "ui7_temperature",
+					"text": "temperature"
+				},
+				"suffix": {
+					"lang_tag": "ui7_degrees",
+					"text": "degrees"
+				},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_temperature_goes_above",
+					"text": "_DEVICE_NAME_ temperature goes above _ARGUMENT_VALUE_ degrees"
 				}
-			]
+			}]
 		},
 		{
 			"id": 2,
@@ -492,26 +430,24 @@
 			},
 			"serviceId": "urn:upnp-org:serviceId:TemperatureSensor1",
 			"norepeat": "1",
-			"argumentList": [
-				{
-					"id": 1,
-					"dataType": "i4",
-					"name": "CurrentTemperature",
-					"comparisson": "<",
-					"prefix": {
-						"lang_tag": "ui7_temperature",
-						"text": "temperature"
-					},
-					"suffix": {
-						"lang_tag": "ui7_degrees",
-						"text": "degrees"
-					},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_temperature_goes_below",
-						"text": "_DEVICE_NAME_ temperature goes below _ARGUMENT_VALUE_ degrees"
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"name": "CurrentTemperature",
+				"comparisson": "<",
+				"prefix": {
+					"lang_tag": "ui7_temperature",
+					"text": "temperature"
+				},
+				"suffix": {
+					"lang_tag": "ui7_degrees",
+					"text": "degrees"
+				},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_temperature_goes_below",
+					"text": "_DEVICE_NAME_ temperature goes below _ARGUMENT_VALUE_ degrees"
 				}
-			]
+			}]
 		},
 		{
 			"id": 3,
@@ -521,27 +457,25 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-					"name": "ApparentTemperature",
-					"comparisson": ">",
-					"prefix": {
-						"lang_tag": "ui7_temperature",
-						"text": "temperature"
-					},
-					"suffix": {
-						"lang_tag": "ui7_degrees",
-						"text": "degrees"
-					},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_temperature_goes_above",
-						"text": "_DEVICE_NAME_ apparent temperature goes above _ARGUMENT_VALUE_ degrees"
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"name": "ApparentTemperature",
+				"comparisson": ">",
+				"prefix": {
+					"lang_tag": "ui7_temperature",
+					"text": "temperature"
+				},
+				"suffix": {
+					"lang_tag": "ui7_degrees",
+					"text": "degrees"
+				},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_temperature_goes_above",
+					"text": "_DEVICE_NAME_ apparent temperature goes above _ARGUMENT_VALUE_ degrees"
 				}
-			],
+			}]
 		},
 		{
 			"id": 4,
@@ -551,27 +485,25 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-					"name": "ApparentTemperature",
-					"comparisson": "<",
-					"prefix": {
-						"lang_tag": "ui7_temperature",
-						"text": "temperature"
-					},
-					"suffix": {
-						"lang_tag": "ui7_degrees",
-						"text": "degrees"
-					},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_temperature_goes_below",
-						"text": "_DEVICE_NAME_ apparent temperature goes below _ARGUMENT_VALUE_ degrees"
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"name": "ApparentTemperature",
+				"comparisson": "<",
+				"prefix": {
+					"lang_tag": "ui7_temperature",
+					"text": "temperature"
+				},
+				"suffix": {
+					"lang_tag": "ui7_degrees",
+					"text": "degrees"
+				},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_temperature_goes_below",
+					"text": "_DEVICE_NAME_ apparent temperature goes below _ARGUMENT_VALUE_ degrees"
 				}
-			],
+			}]
 		},
 		{
 			"id": 5,
@@ -581,27 +513,25 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-					"name": "Ozone",
-					"comparisson": ">",
-					"prefix": {
-						"lang_tag": "ui7_ozone",
-						"text": "ozone"
-					},
-					"suffix": {
-						"lang_tag": "ui7_dobson",
-						"text": "dobson"
-					},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_ozone_goes_above",
-						"text": "_DEVICE_NAME_ ozone goes above _ARGUMENT_VALUE_ dobson"
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"name": "Ozone",
+				"comparisson": ">",
+				"prefix": {
+					"lang_tag": "ui7_ozone",
+					"text": "ozone"
+				},
+				"suffix": {
+					"lang_tag": "ui7_dobson",
+					"text": "dobson"
+				},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_ozone_goes_above",
+					"text": "_DEVICE_NAME_ ozone goes above _ARGUMENT_VALUE_ dobson"
 				}
-			],
+			}]
 		},
 		{
 			"id": 6,
@@ -611,27 +541,25 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-					"name": "Ozone",
-					"comparisson": "<",
-					"prefix": {
-						"lang_tag": "ui7_ozone",
-						"text": "ozone"
-					},
-					"suffix": {
-						"lang_tag": "ui7_dobson",
-						"text": "dobson"
-					},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_dobson_goes_below",
-						"text": "_DEVICE_NAME_ ozone goes below _ARGUMENT_VALUE_ dobson"
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"name": "Ozone",
+				"comparisson": "<",
+				"prefix": {
+					"lang_tag": "ui7_ozone",
+					"text": "ozone"
+				},
+				"suffix": {
+					"lang_tag": "ui7_dobson",
+					"text": "dobson"
+				},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_dobson_goes_below",
+					"text": "_DEVICE_NAME_ ozone goes below _ARGUMENT_VALUE_ dobson"
 				}
-			],
+			}]
 		},
 		{
 			"id": 7,
@@ -641,24 +569,22 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-					"name": "uvIndex",
-					"comparisson": ">",
-					"prefix": {
-						"lang_tag": "ui7_index",
-						"text": "Index"
-					},
-					"suffix": {	},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_uvindex_goes_above",
-						"text": "_DEVICE_NAME_ uv index goes above _ARGUMENT_VALUE_ "
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"name": "uvIndex",
+				"comparisson": ">",
+				"prefix": {
+					"lang_tag": "ui7_index",
+					"text": "Index"
+				},
+				"suffix": {},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_uvindex_goes_above",
+					"text": "_DEVICE_NAME_ uv index goes above _ARGUMENT_VALUE_ "
 				}
-			],
+			}]
 		},
 		{
 			"id": 8,
@@ -668,24 +594,22 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-					"name": "uvIndex",
-					"comparisson": "<",
-					"prefix": {
-						"lang_tag": "ui7_index",
-						"text": "Index"
-					},
-					"suffix": {	},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_dobson_goes_below",
-						"text": "_DEVICE_NAME_ uv index goes below _ARGUMENT_VALUE_ "
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"name": "uvIndex",
+				"comparisson": "<",
+				"prefix": {
+					"lang_tag": "ui7_index",
+					"text": "Index"
+				},
+				"suffix": {},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_dobson_goes_below",
+					"text": "_DEVICE_NAME_ uv index goes below _ARGUMENT_VALUE_ "
 				}
-			],
+			}]
 		},
 		{
 			"id": 9,
@@ -695,24 +619,22 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-					"name": "Visibility",
-					"comparisson": ">",
-					"prefix": {
-						"lang_tag": "ui7_visibility",
-						"text": "Visibility"
-					},
-					"suffix": {	},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_visibility_goes_above",
-						"text": "_DEVICE_NAME_ visibility goes above _ARGUMENT_VALUE_ "
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"name": "Visibility",
+				"comparisson": ">",
+				"prefix": {
+					"lang_tag": "ui7_visibility",
+					"text": "Visibility"
+				},
+				"suffix": {},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_visibility_goes_above",
+					"text": "_DEVICE_NAME_ visibility goes above _ARGUMENT_VALUE_ "
 				}
-			],
+			}]
 		},
 		{
 			"id": 10,
@@ -722,24 +644,22 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-					"name": "Visibility",
-					"comparisson": "<",
-					"prefix": {
-						"lang_tag": "ui7_visibility",
-						"text": "Visibility"
-					},
-					"suffix": {	},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_visibility_goes_below",
-						"text": "_DEVICE_NAME_ visibility goes below _ARGUMENT_VALUE_ "
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"name": "Visibility",
+				"comparisson": "<",
+				"prefix": {
+					"lang_tag": "ui7_visibility",
+					"text": "Visibility"
+				},
+				"suffix": {},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_visibility_goes_below",
+					"text": "_DEVICE_NAME_ visibility goes below _ARGUMENT_VALUE_ "
 				}
-			],
+			}]
 		},
 		{
 			"id": 11,
@@ -749,28 +669,26 @@
 			},
 			"serviceId": "urn:micasaverde-com:serviceId:HumiditySensor1",
 			"norepeat": "1",
-			"argumentList": [
-				{
-					"id": 1,
-					"dataType": "i4",
-					"name": "CurrentLevel",
-					"comparisson": ">",
-                    "minValue": "0",
-                    "maxValue": "99",
-					"prefix": {
-						"lang_tag":"ui7_humidity",
-						"text": "Humidity"
-					},
-					"suffix": {
-						"lang_tag":"ui7_percent_sign",
-						"text":"%"
-					},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_humidity_goes_above",
-						"text": "Humidity reported by _DEVICE_NAME_ goes above _ARGUMENT_VALUE_"
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"name": "CurrentLevel",
+				"comparisson": ">",
+				"minValue": "0",
+				"maxValue": "99",
+				"prefix": {
+					"lang_tag": "ui7_humidity",
+					"text": "Humidity"
+				},
+				"suffix": {
+					"lang_tag": "ui7_percent_sign",
+					"text": "%"
+				},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_humidity_goes_above",
+					"text": "Humidity reported by _DEVICE_NAME_ goes above _ARGUMENT_VALUE_"
 				}
-			]
+			}]
 		},
 		{
 			"id": 12,
@@ -780,28 +698,26 @@
 			},
 			"serviceId": "urn:micasaverde-com:serviceId:HumiditySensor1",
 			"norepeat": "1",
-			"argumentList": [
-				{
-					"id": 1,
-					"dataType": "i4",
-					"name": "CurrentLevel",
-					"comparisson": "<",
-                    "minValue": "1",
-                    "maxValue": "100",
-					"prefix": {
-						"lang_tag":"ui7_humidity",
-						"text": "Humidity"
-					},
-					"suffix": {
-						"lang_tag":"ui7_percent_sign",
-						"text":"%"
-					},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_humidity_goes_below",
-						"text": "Humidity reported by _DEVICE_NAME_ goes below _ARGUMENT_VALUE_"
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"name": "CurrentLevel",
+				"comparisson": "<",
+				"minValue": "1",
+				"maxValue": "100",
+				"prefix": {
+					"lang_tag": "ui7_humidity",
+					"text": "Humidity"
+				},
+				"suffix": {
+					"lang_tag": "ui7_percent_sign",
+					"text": "%"
+				},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_humidity_goes_below",
+					"text": "Humidity reported by _DEVICE_NAME_ goes below _ARGUMENT_VALUE_"
 				}
-			]
+			}]
 		},
 		{
 			"id": 13,
@@ -811,26 +727,24 @@
 			},
 			"serviceId": "urn:upnp-org:serviceId:BarometerSensor1",
 			"norepeat": "1",
-			"argumentList": [
-				{
-					"id": 1,
-					"dataType": "i4",
-					"name": "CurrentPressure",
-					"comparisson": ">",
-					"prefix": {
-						"lang_tag":"ui7_pressure",
-						"text": "Pressure"
-					},
-					"suffix": {
-						"lang_tag":"ui7_milibar",
-						"text":"milibar"
-					},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_pressure_goes_above",
-						"text": "Pressure reported by _DEVICE_NAME_ goes above _ARGUMENT_VALUE_ milibar"
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"name": "CurrentPressure",
+				"comparisson": ">",
+				"prefix": {
+					"lang_tag": "ui7_pressure",
+					"text": "Pressure"
+				},
+				"suffix": {
+					"lang_tag": "ui7_milibar",
+					"text": "milibar"
+				},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_pressure_goes_above",
+					"text": "Pressure reported by _DEVICE_NAME_ goes above _ARGUMENT_VALUE_ milibar"
 				}
-			]
+			}]
 		},
 		{
 			"id": 14,
@@ -840,26 +754,24 @@
 			},
 			"serviceId": "urn:upnp-org:serviceId:BarometerSensor1",
 			"norepeat": "1",
-			"argumentList": [
-				{
-					"id": 1,
-					"dataType": "i4",
-					"name": "CurrentPressure",
-					"comparisson": "<",
-					"prefix": {
-						"lang_tag":"ui7_pressure",
-						"text": "Pressure"
-					},
-					"suffix": {
-						"lang_tag":"ui7_milibar",
-						"text":"milibar"
-					},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_pressure_goes_below",
-						"text": "Pressure reported by _DEVICE_NAME_ goes below _ARGUMENT_VALUE_"
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"name": "CurrentPressure",
+				"comparisson": "<",
+				"prefix": {
+					"lang_tag": "ui7_pressure",
+					"text": "Pressure"
+				},
+				"suffix": {
+					"lang_tag": "ui7_milibar",
+					"text": "milibar"
+				},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_pressure_goes_below",
+					"text": "Pressure reported by _DEVICE_NAME_ goes below _ARGUMENT_VALUE_"
 				}
-			]
+			}]
 		},
 		{
 			"id": 15,
@@ -869,29 +781,27 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-                    "minValue": "0",
-                    "maxValue": "100",
-					"name": "CurrentCloudCover",
-					"comparisson": ">",
-					"prefix": {
-						"lang_tag": "ui7_cloud_cover",
-						"text": "Cover"
-					},
-					"suffix": {
-						"lang_tag":"ui7_percent_sign",
-						"text":"%"
-					},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_cloud_cover_goes_above",
-						"text": "_DEVICE_NAME_ cloud cover goes above _ARGUMENT_VALUE_ "
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"minValue": "0",
+				"maxValue": "100",
+				"name": "CurrentCloudCover",
+				"comparisson": ">",
+				"prefix": {
+					"lang_tag": "ui7_cloud_cover",
+					"text": "Cover"
+				},
+				"suffix": {
+					"lang_tag": "ui7_percent_sign",
+					"text": "%"
+				},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_cloud_cover_goes_above",
+					"text": "_DEVICE_NAME_ cloud cover goes above _ARGUMENT_VALUE_ "
 				}
-			],
+			}]
 		},
 		{
 			"id": 16,
@@ -901,29 +811,27 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-					"name": "CurrentCloudCover",
-                    "minValue": "0",
-                    "maxValue": "100",
-					"comparisson": "<",
-					"prefix": {
-						"lang_tag": "ui7_cloud_cover",
-						"text": "Cover"
-					},
-					"suffix": {
-						"lang_tag":"ui7_percent_sign",
-						"text":"%"
-					},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_cloud_cover_goes_below",
-						"text": "_DEVICE_NAME_ cloud cover goes below _ARGUMENT_VALUE_ "
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"name": "CurrentCloudCover",
+				"minValue": "0",
+				"maxValue": "100",
+				"comparisson": "<",
+				"prefix": {
+					"lang_tag": "ui7_cloud_cover",
+					"text": "Cover"
+				},
+				"suffix": {
+					"lang_tag": "ui7_percent_sign",
+					"text": "%"
+				},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_cloud_cover_goes_below",
+					"text": "_DEVICE_NAME_ cloud cover goes below _ARGUMENT_VALUE_ "
 				}
-			],
+			}]
 		},
 		{
 			"id": 17,
@@ -933,26 +841,24 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-                    "minValue": "0",
-                    "maxValue": "200",
-					"name": "WindSpeed",
-					"comparisson": ">",
-					"prefix": {
-						"lang_tag": "ui7_speed",
-						"text": "Speed"
-					},
-					"suffix": { },
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_wind_speed_goes_above",
-						"text": "_DEVICE_NAME_ wind speed goes above _ARGUMENT_VALUE_ "
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"minValue": "0",
+				"maxValue": "200",
+				"name": "WindSpeed",
+				"comparisson": ">",
+				"prefix": {
+					"lang_tag": "ui7_speed",
+					"text": "Speed"
+				},
+				"suffix": {},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_wind_speed_goes_above",
+					"text": "_DEVICE_NAME_ wind speed goes above _ARGUMENT_VALUE_ "
 				}
-			],
+			}]
 		},
 		{
 			"id": 18,
@@ -962,26 +868,24 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-					"name": "WindSpeed",
-                    "minValue": "0",
-                    "maxValue": "200",
-					"comparisson": "<",
-					"prefix": {
-						"lang_tag": "ui7_speed",
-						"text": "speed"
-					},
-					"suffix": {	},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_wind_speed_goes_below",
-						"text": "_DEVICE_NAME_ wind speed goes below _ARGUMENT_VALUE_ "
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"name": "WindSpeed",
+				"minValue": "0",
+				"maxValue": "200",
+				"comparisson": "<",
+				"prefix": {
+					"lang_tag": "ui7_speed",
+					"text": "Speed"
+				},
+				"suffix": {},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_wind_speed_goes_below",
+					"text": "_DEVICE_NAME_ wind speed goes below _ARGUMENT_VALUE_ "
 				}
-			],
+			}]
 		},
 		{
 			"id": 19,
@@ -991,26 +895,24 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-                    "minValue": "0",
-                    "maxValue": "200",
-					"name": "WindGust",
-					"comparisson": ">",
-					"prefix": {
-						"lang_tag": "ui7_speed",
-						"text": "speed"
-					},
-					"suffix": { },
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_wind_gust_goes_above",
-						"text": "_DEVICE_NAME_ wind gust speed goes above _ARGUMENT_VALUE_ "
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"minValue": "0",
+				"maxValue": "200",
+				"name": "WindGust",
+				"comparisson": ">",
+				"prefix": {
+					"lang_tag": "ui7_speed",
+					"text": "Speed"
+				},
+				"suffix": {},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_wind_gust_goes_above",
+					"text": "_DEVICE_NAME_ wind gust speed goes above _ARGUMENT_VALUE_ "
 				}
-			],
+			}]
 		},
 		{
 			"id": 20,
@@ -1020,27 +922,107 @@
 			},
 			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
 			"norepeat": "1",
-			"argumentList" : [ 
-				{
-					"id": 1,
-					"dataType": "i4",
-					"defaultValue": "",
-					"name": "WindGust",
-                    "minValue": "0",
-                    "maxValue": "200",
-					"comparisson": "<",
-					"prefix": {
-						"lang_tag": "ui7_speed",
-						"text": "speed"
-					},
-					"suffix": {	},
-					"HumanFriendlyText": {
-						"lang_tag": "ui7_hft_wind_gust_goes_below",
-						"text": "_DEVICE_NAME_ wind gust speed goes below _ARGUMENT_VALUE_ "
-					}
+			"argumentList": [{
+				"id": 1,
+				"dataType": "i4",
+				"defaultValue": "",
+				"name": "WindGust",
+				"minValue": "0",
+				"maxValue": "200",
+				"comparisson": "<",
+				"prefix": {
+					"lang_tag": "ui7_speed",
+					"text": "Speed"
+				},
+				"suffix": {},
+				"HumanFriendlyText": {
+					"lang_tag": "ui7_hft_wind_gust_goes_below",
+					"text": "_DEVICE_NAME_ wind gust speed goes below _ARGUMENT_VALUE_ "
 				}
-			],
+			}]
+		},
+		{
+			"id": 21,
+			"label": {
+				"lang_tag": "ui7_icon_changes_to",
+				"text": "Icon changes to"
+			},
+			"serviceId": "urn:upnp-micasaverde-com:serviceId:Weather1",
+			"norepeat": "1",
+			"argumentList": [{
+				"id": 1,
+				"dataType": "string",
+				"defaultValue": "",
+				"name": "icon",
+				"allowedValueList": [
+					{
+						"Clear day": "clear-day",
+						"HumanFriendlyText": {
+							"text": "Whenever it is a clear day"
+						}
+					},
+					{
+						"Clear night": "clear-night",
+						"HumanFriendlyText": {
+							"text": "Whenever it is a clear night"
+						}
+					},
+					{
+						"Raining": "rain",
+						"HumanFriendlyText": {
+							"text": "Whenever it is raining"
+						}
+					},
+					{
+						"Snowing": "snow",
+						"HumanFriendlyText": {
+							"text": "Whenever it is snowing"
+						}
+					},
+					{
+						"Sleet": "sleet",
+						"HumanFriendlyText": {
+							"text": "Whenever there is sleet"
+						}
+					},
+					{
+						"Windy": "wind",
+						"HumanFriendlyText": {
+							"text": "Whenever it is windy"
+						}
+					},
+					{
+						"Foggy": "fog",
+						"HumanFriendlyText": {
+							"text": "Whenever it is foggy"
+						}
+					},
+					{
+						"Cloudy": "cloudy",
+						"HumanFriendlyText": {
+							"text": "Whenever it is cloudy"
+						}
+					},
+					{
+						"Partly cloudy day": "partly-cloudy-day",
+						"HumanFriendlyText": {
+							"text": "Whenever it is a partly cloudy day"
+						}
+					},
+					{
+						"Partly cloudy night": "partly-cloudy-night",
+						"HumanFriendlyText": {
+							"text": "Whenever it is a partly cloudy night"
+						}
+					}
+				],
+				"comparisson": "=",
+				"prefix": {
+                        "text": "Icon"
+				},
+				"suffix": {}
+			}]
 		}
-	]
-	"DeviceType": "urn:schemas-micasaverde-com:device:Weather1"
+	],
+	"device_type": "urn:schemas-micasaverde-com:device:Weather:1"
 }

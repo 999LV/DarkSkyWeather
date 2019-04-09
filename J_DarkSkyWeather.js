@@ -1,7 +1,8 @@
 //# sourceURL=J_DarkSkyWeather.js
-/* DarkSkyWeather Hub Control UI
- Written by R.Boer. 
- V0.7 30 March 2019
+/* 
+	DarkSkyWeather Hub Control UI
+	Written by R.Boer. 
+	V0.7 9 April 2019
 */
 var DarkSkyWeather = (function (api) {
 
@@ -36,14 +37,14 @@ var DarkSkyWeather = (function (api) {
 			var timeUpd = [{'value':'300','label':'5 minutes'},{'value':'900','label':'15 minutes'},{'value':'1800','label':'30 minutes'},{'value':'3600','label':'1 hour'}];
 			var logLevel = [{'value':'1','label':'Error'},{'value':'2','label':'Warning'},{'value':'8','label':'Info'},{'value':'11','label':'Debug'}];
 			var unitMap = [{'value':'auto','label':'Auto'},{'value':'si','label':'System International'},{'value':'us','label':'Imperial'},{'value':'ca','label':'Canadian'},{'value':'uk2','label':'British'}];
-			var languageMap = [{'value':'ar','label':'Arabic'},{'value':'aa','label':'Azerbaijani'},{'value':'be','label':'Belarusian'},{'value':'bg','label':'Bulgarian'},{'value':'bn','label':'Bengali'},{'value':'bs','label':'Bosnian'},{'value':'ca','label':'Catalan'},{'value':'cs','label':'Czech'},{'value':'da','label':'Danish'},{'value':'de','label':'German'},{'value':'el','label':'Greek'},{'value':'en','label':'English'},{'value':'eo','label':'Esperanto'},{'value':'es','label':'Spanish'},{'value':'et','label':'Estonian'},{'value':'fi','label':'Finnish'},{'value':'fr','label':'French'},{'value':'he','label':'Hebrew'},{'value':'hi','label':'Hindi'},{'value':'hr','label':'Croatian'},{'value':'hu','label':'Hungarian'},{'value':'id','label':'Indonesian'},{'value':'is','label':'Icelandic'},{'value':'it','label':'Italian'},{'value':'ja','label':'Japanese'},{'value':'ka','label':'Georgian'},{'value':'kn','label':'Kannada'},{'value':'ko','label':'Korean'},{'value':'kw','label':'Cornish'},{'value':'lv','label':'Latvian'},{'value':'ml','label':'Malayam'},{'value':'mr','label':'Marathi'},{'value':'nb','label':'Norwegian Bokmål'},{'value':'nl','label':'Dutch'},{'value':'no','label':'Norwegian'},{'value':'pa','label':'Punjabi'},{'value':'pl','label':'Polish'},{'value':'pt','label':'Portuguese'},{'value':'ro','label':'Romanian'},{'value':'ru','label':'Russian'},{'value':'sk','label':'Slovak'},{'value':'sl','label':'Slovenian'},{'value':'sr','label':'Serbian'},{'value':'sv','label':'Swedish'},{'value':'ta','label':'Tamil'},{'value':'te','label':'Telugu'},{'value':'tet','label':'Tetum'},{'value':'tr','label':'Turkish'},{'value':'uk','label':'Ukrainian'},{'value':'ur','label':'Urdu'},{'value':'x-pig-latin','label':'Igpay Atinlay'},{'value':'zh','label':'simplified Chinese'},{'value':'zh-tw','label':'traditional Chinese'}];
+			var languageMap = [{'value':'ar','label':'Arabic'},{'value':'aa','label':'Azerbaijani'},{'value':'be','label':'Belarusian'},{'value':'bg','label':'Bulgarian'},{'value':'bn','label':'Bengali'},{'value':'bs','label':'Bosnian'},{'value':'ca','label':'Catalan'},{'value':'cs','label':'Czech'},{'value':'da','label':'Danish'},{'value':'nl','label':'Dutch'},{'value':'de','label':'German'},{'value':'el','label':'Greek'},{'value':'en','label':'English'},{'value':'eo','label':'Esperanto'},{'value':'es','label':'Spanish'},{'value':'et','label':'Estonian'},{'value':'fi','label':'Finnish'},{'value':'fr','label':'French'},{'value':'he','label':'Hebrew'},{'value':'hi','label':'Hindi'},{'value':'hr','label':'Croatian'},{'value':'hu','label':'Hungarian'},{'value':'id','label':'Indonesian'},{'value':'is','label':'Icelandic'},{'value':'it','label':'Italian'},{'value':'ja','label':'Japanese'},{'value':'ka','label':'Georgian'},{'value':'kn','label':'Kannada'},{'value':'ko','label':'Korean'},{'value':'kw','label':'Cornish'},{'value':'lv','label':'Latvian'},{'value':'ml','label':'Malayam'},{'value':'mr','label':'Marathi'},{'value':'nb','label':'Norwegian Bokmål'},{'value':'no','label':'Norwegian'},{'value':'pa','label':'Punjabi'},{'value':'pl','label':'Polish'},{'value':'pt','label':'Portuguese'},{'value':'ro','label':'Romanian'},{'value':'ru','label':'Russian'},{'value':'sk','label':'Slovak'},{'value':'sl','label':'Slovenian'},{'value':'sr','label':'Serbian'},{'value':'sv','label':'Swedish'},{'value':'ta','label':'Tamil'},{'value':'te','label':'Telugu'},{'value':'tet','label':'Tetum'},{'value':'tr','label':'Turkish'},{'value':'uk','label':'Ukrainian'},{'value':'ur','label':'Urdu'},{'value':'x-pig-latin','label':'Igpay Atinlay'},{'value':'zh','label':'simplified Chinese'},{'value':'zh-tw','label':'traditional Chinese'}];
 
 			var html = '<div class="deviceCpanelSettingsPage">'+
 				'<h3>Device #'+deviceID+'&nbsp;&nbsp;&nbsp;'+api.getDisplayedDeviceName(deviceID)+'</h3>';
 			if (deviceObj.disabled === '1' || deviceObj.disabled === 1) {
 				html += '<br>Plugin is disabled in Attributes.';
 			} else {
-				html +=	htmlAddInput(deviceID, 'DarkSky Provider Key', 50, 'Key','UpdateSettingsCB') + 
+				html +=	htmlAddInput(deviceID, 'DarkSky Provider Key', 70, 'Key','UpdateSettingsCB') + 
 				htmlAddInput(deviceID, 'Location Latitude', 10, 'Latitude','UpdateSettingsCB')+
 				htmlAddInput(deviceID, 'Location Longitude', 10, 'Longitude','UpdateSettingsCB')+
 				htmlAddPulldown(deviceID, 'Update Interval', 'Period', timeUpd,'UpdateSettingsCB')+
@@ -69,7 +70,6 @@ var DarkSkyWeather = (function (api) {
 		default:
 			varSet(deviceID,varID,val);
 		}
-		application.sendCommandSaveUserData(true);
 	}
 
 	// Add a label and pulldown selection
@@ -101,10 +101,30 @@ var DarkSkyWeather = (function (api) {
 		var html = '<div class="clearfix labelInputContainer">'+
 					'<div class="pull-left inputLabel '+((bOnALTUI) ? 'form-control form-control-sm form-control-plaintext' : '')+'" style="width:280px;">'+lb+'</div>'+
 					'<div class="pull-left">'+
-						'<input class="customInput '+((bOnALTUI) ? 'altui-ui-input form-control form-control-sm' : '')+'" '+onch+'style="width:200px;" '+typ+' size="'+si+'" id="dsID_'+vr+di+'" value="'+val+'">'+
+						'<input class="customInput '+((bOnALTUI) ? 'altui-ui-input form-control form-control-sm' : '')+'" '+onch+'style="width:280px;" '+typ+' size="'+si+'" id="dsID_'+vr+di+'" value="'+val+'">'+
 					'</div>'+
 				   '</div>';
 		return html;
+	}
+
+	// Update variable in user_data and lu_status
+	function varSet(deviceID, varID, varVal, sid) {
+		if (typeof(sid) == 'undefined') { sid = SID_Weather; }
+		api.setDeviceStateVariablePersistent(deviceID, sid, varID, varVal);
+	}
+	// Get variable value. When variable is not defined, this new api returns false not null.
+	function varGet(deviceID, varID, sid) {
+		try {
+			if (typeof(sid) == 'undefined') { sid = SID_Weather; }
+			var res = api.getDeviceState(deviceID, sid, varID);
+			if (res !== false && res !== null && res !== 'null' && typeof(res) !== 'undefined') {
+				return res;
+			} else {
+				return '';
+			}	
+        } catch (e) {
+            return '';
+        }
 	}
 
 	// Get the value of an HTML input field
@@ -122,7 +142,7 @@ var DarkSkyWeather = (function (api) {
 	// Add a Save Settings button
 	function htmlAddButton(di, cb) {
 		var html = '<div class="cpanelSaveBtnContainer labelInputContainer clearfix">'+	
-			'<input class="vBtn pull-right btn" type="button" value="Save Changes" onclick="DarkSkyWeather.'+cb+'(\''+di+'\');"></input>'+
+			'<input class="vBtn pull-right btn" type="button" value="Reload Luup" onclick="DarkSkyWeather.'+cb+'(\''+di+'\');"></input>'+
 			'</div>';
 		return html;
 	}
@@ -160,6 +180,7 @@ var DarkSkyWeather = (function (api) {
 
 	// Force luup reload.
 	function _DoReload(deviceID) {
+		application.sendCommandSaveUserData(true);
 		showBusy(true);
 		htmlSetMessage("Changes to configuration made.<br>Now wait for reload to complete and then refresh your browser page!",false);
 		setTimeout(function() {

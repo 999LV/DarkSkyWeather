@@ -2,7 +2,7 @@
 <!-- 
 	Module D_DarkSkyWeather.xml
 	Written by R.Boer. 
-	V0.6, 29 March 2019
+	V0.7, 9 April 2019
 -->
 <root xmlns="urn:schemas-upnp-org:device-1-0">
 	<specVersion>
@@ -10,7 +10,8 @@
 		<minor>0</minor>
 	</specVersion>
 	<device>
-		<deviceType>urn:schemas-micasaverde-com:device:Weather1</deviceType>
+		<deviceType>urn:schemas-micasaverde-com:device:Weather:1</deviceType>
+		<staticJson>D_DarkSkyWeather.json</staticJson>
 		<friendlyName>DarkSky Weather</friendlyName>
 		<manufacturer>Rene Boer</manufacturer>
 		<manufacturerURL>https://github.com/reneboer/DarkSkyWeather</manufacturerURL>
@@ -27,7 +28,6 @@
 				<SCPDURL>S_DarkSkyWeather.xml</SCPDURL>
 			</service>
 		</serviceList>
-		<staticJson>D_DarkSkyWeather.json</staticJson>
 		<implementationList>
 			<implementationFile>I_DarkSkyWeather.xml</implementationFile>
 		</implementationList>

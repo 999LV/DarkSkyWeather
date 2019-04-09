@@ -1,5 +1,5 @@
 _NAME = "DarkSky Weather"
-_VERSION = "0.5"
+_VERSION = "0.7"
 _DESCRIPTION = "DarkSky Weather plugin"
 _AUTHOR = "Rene Boer"
 
@@ -13,6 +13,7 @@ Version 0.3 2016-11-19 - Beta version with:
 		state icons to reflect current weather - icons from icon8.com
 Version 0.4 2016-11-26 - a few bug fixes and exposes more DarkSky variables - thanks @MikeYeager
 Version 0.5 2019-03-23 - Added WindGust, uvIndex, Visibility
+Version 0.7 2019-04-09 - Added Settings tab, Vera UI7 support, optimized request eliminating hourly data.
 
 Original author logread (aka LV999) upto version 0.4.
 
@@ -40,12 +41,12 @@ local json = require("dkjson")
 local SID_Weather = "urn:upnp-micasaverde-com:serviceId:Weather1"
 local SID_Security = "urn:micasaverde-com:serviceId:SecuritySensor1"
 local SID_AltUI = "urn:upnp-org:serviceId:altui1"
-local DS_urltemplate = "https://api.darksky.net/forecast/%s/%s,%s?lang=%s&units=%s"
+local DS_urltemplate = "https://api.darksky.net/forecast/%s/%s,%s?lang=%s&units=%s&exclude=hourly"
 local this_device, child_temperature, child_humidity = nil, nil, nil
 
 -- these are the configuration and their default values
 local DS = { 
-	Key = "Enter your DarkSky API key here",
+	Key = "",
 	Latitude = "",
 	Longitude = "",
 	Period = 1800,	-- data refresh interval in seconds
@@ -55,6 +56,7 @@ local DS = {
 	ProviderURL = "https://darksky.net/dev/",
 	IconsProvider = "Thanks to icons8 at https://icons8.com",
 	Documentation = "https://raw.githubusercontent.com/reneboer/DarkSkyWeather/master/documentation/DarkSkyWeather.pdf",
+	LogLevel = 1,
 	Version = _VERSION
 }
 
@@ -290,13 +292,6 @@ local taskHandle = -1
 	}
 end 
 
-
--- if plugin runs under AltUI, will diplay condition and pressure in the device box
-local function AltUIdisplay()
-	var.Set("DisplayLine1", var.Get("CurrentConditions"), SID_AltUI)
-	var.Set("DisplayLine2",	"Pressure: " .. var.Get("CurrentPressure", "urn:upnp-org:serviceId:BarometerSensor1"), SID_AltUI)
-end
-
 -- processes and parses the DS data into device variables 
 local function setvariables(key, value)
 	if VariablesMap[key] then
@@ -312,7 +307,7 @@ local function setvariables(key, value)
 		end
 		if tonumber(DS.RainSensor) == 1 then
 			-- the option of a virtual rain sensor is on, so we set the rain flags based on the trigger levels
-			log.Debug("DEBUG: IntensityTrigger = %d - ProbabilityTrigger = %d", DS.PrecipIntensityTrigger, DS.PrecipProbabilityTrigger}) 
+			log.Debug("DEBUG: IntensityTrigger = %d - ProbabilityTrigger = %d", DS.PrecipIntensityTrigger, DS.PrecipProbabilityTrigger) 
 			if key == "currently_precipIntensity" and tonumber(value) >= tonumber(DS.PrecipIntensityTrigger)
 				then rain_intensity_trigger = tonumber(value) >= tonumber(DS.PrecipIntensityTrigger) 
 			elseif key == "currently_precipProbability" and tonumber(value) >= tonumber(DS.PrecipProbabilityTrigger)
@@ -338,23 +333,32 @@ end
 
 -- call the DarkSky API with our key and location parameters and processes the weather data json if success
 local function DS_GetData()
-	local url = string.format(DS_urltemplate, DS.Key, DS.Latitude, DS.Longitude, DS.Language, DS.Units)
-	log.Info("calling DarkSky API with url = %s", url)
-	local wdata, retcode = https.request(url)
-	local err = (retcode ~=200)
-	if err then -- something wrong happpened (website down, wrong key or location)
-		wdata = nil -- to do: better error handling ?
-		log.Error("DarkSky API call failed with http code = %s", tostring(retcode))
-	else
-		wdata, err = json.decode(wdata)
-		if not (err == 225) then
-			extractloop(wdata)
-			AltUIdisplay()
-		else 
-			log.Error({"DarkSky API json decode error = %s", tostring(err)) 
+	if DS.Key ~= "" then
+		local url = string.format(DS_urltemplate, DS.Key, DS.Latitude, DS.Longitude, DS.Language, DS.Units)
+		log.Info("calling DarkSky API with url = %s", url)
+		local wdata, retcode = https.request(url)
+		local err = (retcode ~=200)
+		if err then -- something wrong happpened (website down, wrong key or location)
+			wdata = nil -- to do: better error handling ?
+			log.Error("DarkSky API call failed with http code = %s", tostring(retcode))
+		else
+			log.Debug(wdata)
+			wdata, err = json.decode(wdata)
+			if not (err == 225) then
+				extractloop(wdata)
+				-- Update display for ALTUI
+				var.Set("DisplayLine1", var.Get("CurrentConditions"), SID_AltUI)
+				var.Set("DisplayLine2",	"Pressure: " .. var.Get("CurrentPressure", "urn:upnp-org:serviceId:BarometerSensor1"), SID_AltUI)
+			else 
+				log.Error("DarkSky API json decode error = %s", tostring(err)) 
+			end
 		end
+		return err
+	else
+		var.Set("DisplayLine1", "Complete settings first.", SID_AltUI)
+		log.Error("DarkSky API key is not yet specified.") 
+		return 403
 	end
-	return err
 end
 
 -- check if device configuration parameters are current
