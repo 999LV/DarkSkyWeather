@@ -1,5 +1,63 @@
 <?xml version="1.0"?>
+<!-- 
+	Module I_DarkSkyWeather.xml
+	Written by R.Boer. 
+	V0.7, 9 April 2019
+-->
 <implementation>
-<files>L_DarkSkyWeather.lua</files>
-<startup>init</startup>
+	<specVersion>
+		<major>1</major>
+		<minor>0</minor>
+	</specVersion>
+	<settings>
+		<protocol>crlf</protocol>
+	</settings>
+	<incoming></incoming>
+	<files>L_DarkSkyWeather.lua</files>
+	<startup>init</startup>
+	<actionList>
+		<action>
+			<serviceId>urn:upnp-micasaverde-com:serviceId:Weather1</serviceId>
+			<name>SetUnits</name>
+			<run>
+				var.Set("Units", (lul_settings.newUnits or "auto"))
+			</run>
+		</action>
+		<action>
+			<serviceId>urn:upnp-micasaverde-com:serviceId:Weather1</serviceId>
+			<name>SetLocation</name>
+			<run>
+				var.Set("Latitude", (lul_settings.newLatitude or ""))
+				var.Set("Longitude", (lul_settings.newLongitude or ""))
+			</run>
+		</action>
+		<action>
+			<serviceId>urn:upnp-micasaverde-com:serviceId:Weather1</serviceId>
+			<name>SetPeriod</name>
+			<run>
+				var.Set("Period", (lul_settings.newPeriod or "1800"))
+			</run>
+		</action>
+		<action>
+			<serviceId>urn:upnp-micasaverde-com:serviceId:Weather1</serviceId>
+			<name>SetLanguage</name>
+			<run>
+				var.Set("Language", (lul_settings.newLanguage or "en"))
+			</run>
+		</action>
+		<action>
+			<serviceId>urn:upnp-micasaverde-com:serviceId:Weather1</serviceId>
+			<name>SetProviderKey</name>
+			<run>
+				var.Set("Key", (lul_settings.newKey or ""))
+			</run>
+		</action>
+		<action>
+			<serviceId>urn:upnp-micasaverde-com:serviceId:Weather1</serviceId>
+			<name>SetLogLevel</name>
+			<run>
+				DS_SetLogLevel(lul_settings.newLogLevel or "1")
+			</run>
+		</action>
+	</actionList>
 </implementation>
